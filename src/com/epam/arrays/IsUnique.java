@@ -14,6 +14,7 @@ public class IsUnique {
         System.out.println(isUnique.isUnique("QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"));
     }
 
+    // O(N) solution
     private boolean isUnique(String str) {
         final byte AByte = 65;
         final byte ZByte = 90;
@@ -29,7 +30,7 @@ public class IsUnique {
             } else if (byteChar >= aByte && byteChar <= zByte) { // small letters // O(1)
                 tempIndex = byteChar - 97 + 26;
             }
-            if (resultArray[tempIndex] == 1) { // O(n)
+            if (resultArray[tempIndex] == 1) { // O(1)
                 return false;
             } else {
                 resultArray[tempIndex] = 1;
